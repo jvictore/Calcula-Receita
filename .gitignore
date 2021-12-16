@@ -1,0 +1,11 @@
+.DS_Store
+.buckconfig
+.editorconfig
+.eslintrc.js
+.flowconfig
+.prettierrc.js
+.watchman-cookie-MacBook-Pro-JV.intelbras.local-669-12
+.watchmanconfig
+/android
+/ios
+/node_modules
