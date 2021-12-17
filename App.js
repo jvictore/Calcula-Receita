@@ -17,7 +17,7 @@ import SelectDropdown from 'react-native-select-dropdown'
 const Pilha=createStackNavigator();
 
 
-function TelaHome({navigation}){
+function TelaIngredientes({navigation}){
   const tiposUnidades = ["Gramas", "Quilogramas", "Mililitros", "Litros"]
   const unidades = []
 
@@ -709,6 +709,20 @@ function TelaHome({navigation}){
   )
 }
 
+function TelaHome({navigation}){
+  return(
+    <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
+      <Text>Tela Home</Text>
+      <Button
+        title="Home"
+        onPress={()=>navigation.navigate('CursoReactNative',{
+          aulas:100, autor:'Bruno'
+        })}
+      />
+    </View>
+  )
+}
+
 function TelaCanal({navigation}){
   return(
     <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
@@ -725,6 +739,7 @@ function TelaCanal({navigation}){
     </View>
   )
 }
+
 
 function TelaCursos({navigation}){
   return(
@@ -764,11 +779,11 @@ export default function App1(){
   
   return (
     <NavigationContainer>
-      <Pilha.Navigator initialRouteName="TelaHome">
+      <Pilha.Navigator initialRouteName="Home">
         <Pilha.Screen
           name="Home"
           component={TelaHome}
-          options={{
+          options={({ navigation }) => ({
             title:'Tela Inicial',
             headerStyle:{
               backgroundColor:"#507DBC"
@@ -776,26 +791,33 @@ export default function App1(){
             headerTintColor:"#fff",
             headerRight:()=>(
               <Button
-                title="Cursos"
+                title="Ingredientes"
                 color="#000"
-                onPress={()=>alert('Botao cursos clicado')}
+                onPress={()=>navigation.navigate("Ingredientes")}
               />
             )
-          }}
+          })}
         />
         <Pilha.Screen 
-          name="Canal"
-          component={TelaCanal}
-          options={{
-            title:'Tela Inicial',
+          name="Ingredientes"
+          component={TelaIngredientes}
+          options={({ navigation }) => ({
+            title:'Ingredientes',
             headerStyle:{
-              backgroundColor:"#008"
+              backgroundColor:"#507DBC"
             },
             headerTintColor:"#fff",
             headerTitleStyle:{
               fontWeight:'bold'
-            }
-          }}
+            },
+            headerLeft:()=>(
+              <Button
+                title="Home"
+                color="#000"
+                onPress={()=>navigation.navigate("Home")}
+              />
+            )
+          })}
         />
         <Pilha.Screen 
           name="Cursos"
