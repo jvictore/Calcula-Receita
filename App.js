@@ -1919,7 +1919,7 @@ export default function App1(){
           name="Precos"
           component={TelaPrecos}
           options={({ navigation }) => ({
-            title:'Quantidades e preços (Compra)',
+            title:'Quantidades e preços de compra',
             headerStyle:{
               backgroundColor:"#507DBC"
             },
@@ -1934,7 +1934,7 @@ export default function App1(){
           name="Ingredientes"
           component={TelaIngredientes}
           options={({ navigation }) => ({
-            title:'Quantidades receita',
+            title:'Quantidades usadas',
             headerStyle:{
               backgroundColor:"#507DBC"
             },
@@ -1942,13 +1942,6 @@ export default function App1(){
             headerTitleStyle:{
               fontWeight:'bold'
             },
-            headerRight:()=>(
-              <Button
-                title="Calcula"
-                color="#000"
-                onPress={()=>navigation.navigate("Calcula")}
-              />
-            )
           })}
         />
 
