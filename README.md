@@ -1,7 +1,15 @@
-# Calcula-Receita
+# Calcula Receita
 
-Ferramenta criada para ajudar o calculo de gastos e lucros em receitas simples.
-O aplicativo possui 3 telas:
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [React](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+### Descrição
+Ferramenta criada para ajudar o calculo de gastos e lucros em receitas simples. O aplicativo possui 3 telas:
 - Tela de preços, onde são inseridos os ingredientes que foram comprados e os valores pagos.
  <img src="https://github.com/jvictore/Calcula-Receita/blob/master/prints/Tela%20de%20precos.png?raw=true" width=270 height=500>
  <img src="https://github.com/jvictore/Calcula-Receita/blob/master/prints/Informacoes%20tela%20de%20precos.png?raw=true" width=270 height=500>
