@@ -1,4 +1,7 @@
 # Calcula Receita
+<h4> 
+	🚧  Project paused...  🚧
+</h4>
 
 ### 🛠 Tecnologias
 
